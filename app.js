@@ -91,36 +91,6 @@ const images = [
     }
 ]
 
-
-
-// document.querySelector('.song__wrp').addEventListener('click', () => {
-//     const picture = Math.floor(Math.random() * (images.length + 1));
-//     console.log(picture, images[picture]);
-//     setInterval(() => {
-
-//     }, 1);
-// })
-
-
-
-// function showImages() {
-//     if (a < images.length * 2) {
-//         if (document.querySelector('.song__img')) {
-//             document.querySelector('.song__img').remove();
-//         }
-
-//         randomSongNumber = Math.floor(Math.random() * (images.length));
-//         document.querySelector('.song__wrp').style.backgroundImage = `url(${images[randomSongNumber].url})`;
-
-//         // document.querySelector('.song__wrp').insertAdjacentHTML('afterbegin',
-//         //     `<img class='song__img' src=${images[a]}></img>`
-//         // )
-//         a++;
-//     } else {
-//         console.log(`${images[randomSongNumber].name}`);
-//         clearInterval(preload);
-//     }
-// }
 let a = 0;
 
 document.querySelector('.song__wrp').addEventListener('click', function () {
@@ -134,14 +104,10 @@ document.querySelector('.song__wrp').addEventListener('click', function () {
             randomSongNumber = Math.floor(Math.random() * (images.length));
             document.querySelector('.song__wrp').style.backgroundImage = `url(${images[randomSongNumber].url})`;
 
-            // document.querySelector('.song__wrp').insertAdjacentHTML('afterbegin',
-            //     `<img class='song__img' src=${images[a]}></img>`
-            // )
             a++;
         } else {
             document.querySelector('.song__name').innerHTML = `${images[randomSongNumber].name}`;
-            const audio = document.querySelector('audio');
-            audio.src = `${images[randomSongNumber].song}`;
+            let audio = new Audio(`${images[randomSongNumber].song}`);
             audio.play();
             clearInterval(preload);
         }
