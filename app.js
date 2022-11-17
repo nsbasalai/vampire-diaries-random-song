@@ -32,7 +32,7 @@ const images = [
     {
         name: 'Ron Pope - A Drop in the Ocean',
         url: 'images/drop_in_the_ocean.jpg',
-        song: 'songs/Jason Walker - Down.mp3'
+        song: 'songs/Ron Pope - A Drop in the Ocean.mp3'
     },
     {
         name: 'Jason Walker - Echo',
