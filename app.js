@@ -108,7 +108,8 @@ document.querySelector('.song__wrp').addEventListener('click', function () {
         } else {
             document.querySelector('.song__name').innerHTML = `${images[randomSongNumber].name}`;
             let audio = new Audio(`${images[randomSongNumber].song}`);
-            audio.autoplay = true;
+            audio.muted = false;
+            audio.play();
             clearInterval(preload);
         }
     }, 100);
