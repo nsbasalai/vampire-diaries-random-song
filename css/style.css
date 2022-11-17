@@ -1,0 +1,36 @@
+body {
+    background-color: #232323;
+    color: #fff;
+}
+
+.container {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.headline {
+    margin: 60px 0 40px;
+}
+
+.song__wrp {
+    background-color: #fff;
+    width: 320px;
+    height: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+    background-size: cover;
+}
+
+.song__img {
+    width: 100%;
+}
+
+.song__start {
+    color: #232323;
+    font-size: 32px;
+}
