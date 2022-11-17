@@ -109,7 +109,9 @@ document.querySelector('.song__wrp').addEventListener('click', function () {
             document.querySelector('.song__name').innerHTML = `${images[randomSongNumber].name}`;
             let audio = new Audio(`${images[randomSongNumber].song}`);
             audio.muted = false;
-            audio.play();
+            document.addEventListener('click', () => {
+                audio.play();
+            })
             clearInterval(preload);
         }
     }, 100);
